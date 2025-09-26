@@ -1,0 +1,8 @@
+# 出席管理システム - プロジェクト全体の依存関係
+# このファイルはプロジェクト全体の仮想環境構築用です
+
+# サーバー側の依存関係
+-r server/backend/requirements.txt
+
+# クライアント側の依存関係
+-r client/requirements.txt

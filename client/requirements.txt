@@ -1,0 +1,26 @@
+# クライアントプログラム用の依存関係
+# NFCリーダーを使用した出席管理クライアント
+
+# GUI関連（Python標準ライブラリ）
+# tkinter - Python標準ライブラリ（通常は別途インストール不要）
+
+# NFC関連
+nfcpy>=1.0.4
+
+# HTTP通信
+requests>=2.31.0
+
+# 日時処理（Python標準ライブラリ）
+# datetime
+
+# スレッド処理（Python標準ライブラリ）
+# threading
+
+# JSON処理（Python標準ライブラリ）
+# json
+
+# システム関連（Python標準ライブラリ）
+# sys, os, re
+
+# 型ヒント
+typing-extensions>=4.0.0
