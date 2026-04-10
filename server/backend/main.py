@@ -132,6 +132,8 @@ async def delete_student(
 
         return {"status": "success", "message": f"学生ID {student_id} のレコードを削除しました"}
 
+    except HTTPException:
+        raise
     except Exception as e:
         db.rollback()
         logger.error(f"学生削除エラー: {str(e)}")
@@ -442,6 +444,8 @@ async def set_coretime(
         
         db.commit()
         return {"message": "Core time updated successfully"}
+    except HTTPException:
+        raise
     except Exception as e:
         db.rollback()
         raise HTTPException(status_code=500, detail=str(e))
@@ -465,6 +469,8 @@ async def get_coretime(
             "core_time_2_day": student.core_time_2_day,
             "core_time_2_period": student.core_time_2_period
         }
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"コアタイム取得エラー: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
